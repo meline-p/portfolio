@@ -188,78 +188,98 @@ var projectInfos = document.querySelector(".project-description");
 var projectIMG = document.querySelector(".project-img");
 var projectURL = document.querySelector(".project-link");
 
-var projectsButtons = document.querySelector(".projects-buttons");
+var button = document.querySelectorAll("button")
 
-// Buttons to filter projects
+var projectTypeFe = projetsData.filter(function (project) {
+  return project.type === "Front-End"
+})
+var projectTypeBe  = projetsData.filter(function (project) {
+  return project.type === "Back-End"
+})
+var projectTypeFs  = projetsData.filter(function (project) {
+    return project.type === "Full-Stack"
+  })
 
-function Projets () {
-
-    function update(item, newItem) {
-    item = newItem;
-    return item;
-    }
-
-    function state(item) {
-        return [ item, update ];
-    }
-
-    const [item, setItem] = state(projetsData);
-
-    const menuItems = [...new Set(projetsData.map((projet) => projet.type))];
-
-
-    function filterItem (currentType){
-        const newItem = projetsData.filter((newVal) => {
-          return newVal.type === currentType;
-        });
-        setItem(newItem);
-    }
-
-
-    // Spread Buttons
-function spreadProjectsButtons (buttons, filter, set) {
-    projectsButtons.innerHTML = '';
-    buttons = menuItems;
-
-    buttons.forEach(button => {
-        const buttonEl = document.createElement('div');
-        buttonEl.classList.add("button");
-        buttonEl.innerHTML = `${button}`
-        
-        projectsButtons.appendChild(buttonEl);
-    })
-
-    // ALL
-    const buttonElAll = document.createElement('div');
-    buttonElAll.classList.add("button");
-    buttonElAll.innerHTML = `All`
-
-    // DIVIDER
-    const dividerButtonEl = document.createElement('div');
-    dividerButtonEl.classList.add("divider-button")
-    dividerButtonEl.innerHTML = ``
-
-    // PROJETS 3D
-    const buttonEl3D = document.createElement('div');
-    buttonEl3D.classList.add("button");
-    buttonEl3D.innerHTML = `Projets 3D`
-
-    projectsButtons.appendChild(buttonElAll);
-    projectsButtons.appendChild(dividerButtonEl);
-    projectsButtons.appendChild(buttonEl3D);
+// Map pour tous les projets 
+function spreadProjects() {
+    projectGroup.innerHTML = '';
+    projetsData.map(project => {
+        const {title, type, infos, img, url, id} = project;
+        const projectEl = document.createElement('div');
+        projectEl.classList.add("project-item");
+        projectEl.innerHTML =`
+        <a class="project-link" href="${url}" target="_blank">
+            <div class="project-card">
+                <img class="project-img" src="${img}" alt="img-${id}">
+                <div class="project-card-info">
+                    <h3 class="project-title">${title}</h3>
+                    <div class="project-badge">
+                        <p style="background-color: ${type} === "Front-End" ? green : ${type} === "Back-End" ? yellow : blue">${type}</p>
+                    </div>
+                    <p class="project-description">${infos}</p>
+                </div>
+            </div>
+        </a>
+        `
+        projectGroup.appendChild(projectEl);
+    });
 }
 
-// ForEach pour chaque projets 
-function spreadProjects(projects) {
+spreadProjects();
 
+
+function handleClickFe() {
     projectGroup.innerHTML = '';
-    projects = projetsData;
-
-
-    projects.forEach(project => {
-
+    projectTypeFe.map(project => {
         const {title, type, infos, img, url, id} = project;
+        const projectEl = document.createElement('div');
+        projectEl.classList.add("project-item");
+        projectEl.innerHTML =`
+        <a class="project-link" href="${url}" target="_blank">
+            <div class="project-card">
+                <img class="project-img" src="${img}" alt="img-${id}">
+                <div class="project-card-info">
+                    <h3 class="project-title">${title}</h3>
+                    <div class="project-badge">
+                        <p style="background-color: ${type} === "Front-End" ? green : ${type} === "Back-End" ? yellow : blue">${type}</p>
+                    </div>
+                    <p class="project-description">${infos}</p>
+                </div>
+            </div>
+        </a>
+        `
+        projectGroup.appendChild(projectEl);
+    });
+}
 
+function handleClickBe() {
+    projectGroup.innerHTML = '';
+    projectTypeBe.map(project => {
+        const {title, type, infos, img, url, id} = project;
+        const projectEl = document.createElement('div');
+        projectEl.classList.add("project-item");
+        projectEl.innerHTML =`
+        <a class="project-link" href="${url}" target="_blank">
+            <div class="project-card">
+                <img class="project-img" src="${img}" alt="img-${id}">
+                <div class="project-card-info">
+                    <h3 class="project-title">${title}</h3>
+                    <div class="project-badge">
+                        <p style="background-color: ${type} === "Front-End" ? green : ${type} === "Back-End" ? yellow : blue">${type}</p>
+                    </div>
+                    <p class="project-description">${infos}</p>
+                </div>
+            </div>
+        </a>
+        `
+        projectGroup.appendChild(projectEl);
+    });
+}
+
+function handleClickFs() {
+    projectGroup.innerHTML = '';
+    projectTypeFs.map(project => {
+        const {title, type, infos, img, url, id} = project;
         const projectEl = document.createElement('div');
         projectEl.classList.add("project-item");
         projectEl.innerHTML =`
@@ -282,49 +302,3 @@ function spreadProjects(projects) {
 
 
 
-    spreadProjectsButtons(menuItems, filterItem(), setItem);
-    spreadProjects(item);
-
-}
-
-Projets();
-
-
-
-
-
-   
-
-
-
-    // const openInNewTab = url => {
-    //     window.open(url, '_blank', 'noopener,noreferrer');
-    // };
-
-    // return (
-    //     <div className="d-flex justify-content-center container-projets-buttons">
-    //         {menuItems.map((Val, id) => {
-    //             return (
-    //                 <button
-    //                     className="btn-outline-dark btn projets-buttons"
-    //                     onClick={() => filterItem(Val)}
-    //                     key={id}
-    //                 >
-    //                     {Val}
-    //                 </button>
-    //             );
-    //         })}
-    //         <button
-    //             className="btn-outline-dark btn projets-buttons"
-    //             onClick={() => setItem(projetsData)}
-    //         >
-    //             All
-    //         </button>
-    //         <button
-    //             className="btn-outline-warning btn projets-buttons"
-    //             onClick={() => openInNewTab("https://melinepischedda.wixsite.com/portfolio/portfolio")}
-    //         >
-    //            Projets 3D
-    //         </button>
-    //     </div>
-    // )

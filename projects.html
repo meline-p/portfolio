@@ -21,12 +21,20 @@
     </div>
 
     <header>
-        <h1>Projets</h1>
+        <a><h1>Projets 3D</h1></a>
+        <div class="divider-button"></div>
+        <a><h1 class="p">Projets Développement Web</h1></a>
+        <div class="divider-button"></div>
+        <a><h1>Projets Design d'espace</h1></a>
     </header>
 
     <section class="projects-container">
         <div class="projects-buttons">
-            <!-- forEach pour chaque buttons + autres -->
+            <button onclick=spreadProjects() class="all-btn">All</button>
+            <button onclick=handleClickFe() class="fe-btn">Front-End</button>
+            <button onclick=handleClickBe() class="be-btn">Back-End</button> 
+            <button onclick=handleClickFs() class="fs-btn">Full-Stack</button>        
+            </div>
         </div>
         <div class="projects-group"> 
             <!-- forEach pour chaque projets dans app.js -->
