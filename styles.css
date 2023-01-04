@@ -15,6 +15,7 @@
   
 body {
     font-family: 'Poppins', sans-serif;
+    background: url("https://www.transparenttextures.com/patterns/arches.png");
 }
 
 /* NAVBAR TOP */
@@ -32,6 +33,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     font-weight: 400;
+    box-shadow: 0 0 10px 0 rgba(0,0,0, 0.3);
 }
 
 .nav-brand {
@@ -44,29 +46,62 @@ body {
     color: var(--colorRose);
 }
 
+.nav-link {
+    overflow: hidden;
+}
+
 .nav-link a {
     color: var(--colorBlue);
     display: inline;
    text-decoration: none; 
-   padding: 5px;
+   padding: 20px;
    text-transform: uppercase;
    text-align: left;
 }
 .nav-link a:hover {
     color: var(--colorRose);
 }
+.nav-link a:active {
+    color: var(--colorRose);
+}
 
-@media (max-width: 400px) {
+.nav-link .icon {
+    display: none;
+}
+
+@media (max-width: 600px) {
     .nav-link a {
-        display: inline-block;
-        width: 100%;
-        padding: 2px 30px;
-        text-align: center;
+        display: none;
     }
+    .nav-link .icon {
+        float: right;
+        display: block
+    }
+
+
+    .nav-link.responsive {
+        position: relative;
+        overflow: visible;
+    }
+    .nav-link.responsive .icon {
+        position: absolute;
+        right: 5px;
+        top: 65px;
+    }
+    .nav-link.responsive a {
+        position:relative;
+        top: 130px;
+        right:0;
+        display: block;
+        text-align: center;
+        z-index: 2;
+        background-color: var(--colorLightGrey);
+    }
+
 
     .nav-brand {
         padding: 30px;
-        font-size: 12px;
+        font-size: 9px;
     }
 }
 
@@ -83,27 +118,34 @@ body {
     height: 100vh;
     width: 40%;
     position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .home-scroll {
     position: absolute;
-    bottom: 30px;
+    bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
     font-weight: 400;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--colorBlue);
+    background-color: var(--colorWhite);
+    transition: background-color 0.5s ease-out;
 }
-.home-scroll h1 {
-    font-size: 12px;
-    padding: 10px;
-    font-weight: 400;
+.home-scroll:hover {
+    background-color: var(--colorRose);
 }
 
 .home-scroll i {
     position: absolute;
-    bottom: 0px;
+    bottom: 7px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 10px;
+    font-size: 12px;
+    color: var(--colorBlue);
 }
 
 .hero-container {
@@ -113,7 +155,7 @@ body {
     align-items: center;
     text-align: center;
     position: relative;
-    top:50%;
+    top:40%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -129,6 +171,7 @@ body {
     border-radius: 2px;
     transform: rotate(-5deg);
     transition: transform 0.5s ease-out;
+    box-shadow: 0 0 10px 0 rgba(0,0,0, 0.3);
 }
 .container-profile:hover {
     transform: rotate(2deg);
@@ -149,7 +192,7 @@ body {
 }
 
 .container-presentation {
-    width: 250px;
+    width: 350px;
     height: 350px;
 }
 
@@ -166,7 +209,7 @@ body {
     font-size: 30px;
     font-weight: 400;
     text-align: left;
-    padding: 0 40px ;
+    padding: 0 0 0 40px ;
     color: var(--colorBlue);
 }
 
@@ -179,18 +222,61 @@ body {
 
 @media (max-width: 900px) {
     .hero-section {
-        background-color: red;
         height: 50vh;
         width: 100vw;
+    }
+
+    .bg-color {
+        height: 50vh;
+        width: 40%;
+        margin: 0;
     }
 }
 
 @media (max-width: 400px) {
     .hero-section {
-        background-color: red;
         height: 100vh;
         width: 100vw;
     }
+    .hero-container {
+        top:46%;
+    }
+    .bg-color {
+        height: 40vh;
+        width: 100%;
+        margin: 0;
+    }
+    .container-profile {
+        padding: 20px;
+        margin: 5px;
+        width: 180px;
+        height: 230px;
+    }
+    .profile-title {
+        font-family: 'Licorice', cursive;
+        font-size: 25px;
+        font-weight: bold;
+        color: var(--colorBlue);
+    }    
+    .profile-img-top{
+        margin-bottom: 5px;
+        height: 65%;
+        width: 90%;
+    }
+    .container-presentation {
+        width: 350px;
+    }
+    .presentation-titre{
+        text-align: center;
+        font-size: 80px;
+        padding: 40px 40px 10px ;
+    }
+    .presentation-job {
+        font-size: 25px;
+        text-align: center;
+        padding: 15px ;
+    }
+    
 }
 
 
@@ -216,7 +302,7 @@ body {
     }
   
     47% {
-      content: "Généraliste 3D";
+      content: "Designer d'espace";
     }
   
     57% {
@@ -326,10 +412,11 @@ body {
     color: var(--colorBlue);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1200px) {
     .container-item img{
         width: 200px;
         height: 200px;
+        opacity: 1;
     }   
 }
 
@@ -341,6 +428,12 @@ body {
     height: fit-content;
     padding: 30px;
     text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0,0,0, 0.3);
+}
+
+.contact-section a {
+    text-decoration: none;
+    color: var(--colorWhite);
 }
 
 .contact-section h3 {
@@ -358,17 +451,24 @@ body {
     padding: 10px;
 }
 
+@media (max-width: 400px) {
+    .contact-section h3 {
+        font-size: 30px;
+    }
+}
+
 /* FOOTER */
 
 footer{
-    background-color: var(--colorLightGrey);
-    color: var(--colorRose);
+    background-color: var(--colorLightRose);
+    color: var(--colorWhite);
     height: 80px;
     margin: auto;
     text-align: center;
     justify-content: center;
     align-items: center;
     padding: 30px;
+    font-size: 12px;
 }
 
 /************************* PAGE PROJET **************************/
@@ -405,7 +505,7 @@ header a {
 }
 
 .projects-buttons{
-    height: fit-content;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content:center;
@@ -413,16 +513,22 @@ header a {
 }
 
 button { 
-    background-color: var(--colorWhite);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: transparent;
     border: none;
-    border-bottom: 2px solid var(--colorBlue);
+    border-bottom: 3px solid transparent;
     cursor: pointer;
     margin: 10px;
     padding: 5px;
+    transition: border-bottom 0.1s ease-out;
 }
 button:hover {
-    border-bottom: 2px solid var(--colorRose);
+    border-bottom: 3px solid var(--colorBlue);
+}
+button:active {
     color: var(--colorRose);
+    border-bottom: 3px solid var(--colorRose);
 }
 
 .divider-button{
@@ -460,6 +566,7 @@ button:hover {
   border-radius: 10px;
   cursor: pointer;
     border: 2px solid var(--color4);
+    box-shadow: 0 0 10px 0 rgba(0,0,0, 0.3);
 }
 
 .project-card-info {
@@ -476,7 +583,26 @@ button:hover {
     color: white;
     border-radius: 5px;
     margin: 10px 0px;
+    font-size: 14px;
+}
+
+.project-description {
     font-size: 15px;
+    color: var(--colorBlue);
+}
+
+@media (max-width: 900px) {
+    button {
+        border-bottom: 3px solid var(--colorBlue);
+    }
+}
+
+@media (max-width: 500px) {
+    button {
+        font-size: 11px;
+        margin: 4px;
+        padding: 4px;
+    }
 }
 
 /************************* PAGE PROFIL **************************/
@@ -574,6 +700,12 @@ button:hover {
   .profil-footer-3d:hover {
       color: var(--colorBlue);
   }
+
+.download-cv{
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+}
   
   @media only screen and (max-width: 900px) {
     /* For Tablets */
@@ -614,4 +746,37 @@ button:hover {
     }
   
   
+  }
+
+
+/************************* BARRE RESEAUX SOCIAUX **************************/
+
+.container-link{
+    height: 100%;
+    width: 40px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--colorWhite);
+    overflow-x: hidden;
+    padding-top: 20px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0, 0.3);
+}
+.container-link-item {
+    border-style: none;
+    display: flex;
+    flex-direction: column;
+    position: relative ;
+    top: 45%;
+  }
+  
+  .profile-link {
+    margin: auto;
+    color: var(--colorRose);
+    font-size: 20px;
+  }
+  
+  .profile-link:hover {
+    color: var(--color3);
   }

@@ -10,6 +10,10 @@
   integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
   crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
 <!-- Latest compiled JavaScript -->
 <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -23,10 +27,28 @@
         <div class="nav-brand">
             <h1><i class="fa-solid fa-mug-hot"></i> Méline Pischedda</h1>
         </div>
-        <div class="nav-link">
-            <a href="index.html">Home</a>
-            <a href="#">Portfolio</a>
-            <a href="profil.html">Profil</a>
+            <div class="nav-link" id="main-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Portfolio</a>
+                <a href="profil.html">Profil</a>
+                <a href="javascript:void(0);" class="icon" onclick="responsiveMainNav()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-link">
+        <div class="container-link-item">
+            <a href="https://www.linkedin.com/in/melinepischedda/" target="_blank"  class="profile-link">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/meline-p" target="_blank"  class="profile-link">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/melinepischedda/" target="_blank"  class="profile-link">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
         </div>
     </div>
 
@@ -47,21 +69,21 @@
             </div>
         </div>
         <div class="projects-group"> 
-            <!-- forEach pour chaque projets dans app.js -->
+            <!-- map/filter pour chaque projets dans app.js -->
         </div>
     </section>
 
     <section class="contact-section">
         <div>
             <h3 class="contact-titre">Contactez-moi</h3>
-            <p class="contact-infos">meline.pischedda@gmail.com</p>
-            <p class="contact-infos">06 23 36 90 92</p>
+            <p class="contact-infos"><a href="mailto:meline.pischedda@gmail.com" >meline.pischedda@gmail.com</a></p>
+            <p class="contact-infos"><a href="tel:0623369092">06 23 36 90 92</a></p>
             <p class="contact-infos">Aix-en-Provence</p>
         </div>
     </section>
 
     <footer>
-        Copyright © <span class="footer-year">2022</span> Méline Pischedda
+        Copyright © <span class="footer-year">2023</span> Méline Pischedda
     </footer>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

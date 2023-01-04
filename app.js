@@ -12,6 +12,7 @@ const projetsData =[
         title: "Blog Website",
         type: "Back-End",
         infos: "React App",
+        img: "https://www.beelights.gr/assets/images/empty-image.png",
         id: 19,
         url: "",
         active: true
@@ -146,6 +147,7 @@ const projetsData =[
         title: "Secret Project",
         type: "Full-Stack",
         infos: "",
+        img: "https://www.beelights.gr/assets/images/empty-image.png",
         id: 4,
         url: "",
         active: true
@@ -189,6 +191,8 @@ var projectIMG = document.querySelector(".project-img");
 var projectURL = document.querySelector(".project-link");
 
 var button = document.querySelectorAll("button")
+
+var homeScroll = document.querySelector(".home-scroll");
 
 var projectTypeFe = projetsData.filter(function (project) {
   return project.type === "Front-End"
@@ -301,4 +305,14 @@ function handleClickFs() {
 }
 
 
+// Responsive Navbar
+
+function responsiveMainNav() {
+    var x = document.getElementById("main-nav");
+    if (x.className === "nav-link") {
+      x.className += " responsive";
+    } else {
+      x.className = "nav-link";
+    }
+  }
 

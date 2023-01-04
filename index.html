@@ -27,12 +27,30 @@
         <div class="nav-brand">
             <h1><i class="fa-solid fa-mug-hot"></i> Méline Pischedda</h1>
         </div>
-            <div class="nav-link">
-                <a href="#">Home</a>
+            <div class="nav-link" id="main-nav">
+                <a href="index.html">Home</a>
                 <a href="projects.html">Portfolio</a>
                 <a href="profil.html">Profil</a>
+                <a href="javascript:void(0);" class="icon" onclick="responsiveMainNav()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
         </div>
+    </div>
+
+                <div class="container-link">
+                    <div class="container-link-item">
+                        <a href="https://www.linkedin.com/in/melinepischedda/" target="_blank" class="profile-link" >
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/meline-p" target="_blank" class="profile-link">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/melinepischedda/" target="_blank" class="profile-link">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
 
     <section class="hero-section">
         <div class="bg-color"></div>
@@ -51,10 +69,9 @@
             </div> 
         </div>
 
-        <div class="home-scroll">
-            <h1>scroll</h1>
+        <a class="home-scroll" href="#portfolio">
             <i class="fas fa-arrow-down"></i>
-        </div>
+        </a>
         
         
         
@@ -68,7 +85,7 @@
     </section>
 
 
-    <section class="projects-section">
+    <section id="portfolio" class="projects-section" style="padding-top: 80px; margin-top: -80px;">
         <h3>Portfolio</h3>
         <div class="container-projects">
             <div class="container-item">
@@ -81,7 +98,7 @@
                 </a>
             </div>
             <div class="container-item">
-                <a href="https://melinepischedda.wixsite.com/portfolio">
+                <a href="https://melinepischedda.wixsite.com/portfolio" target="_blank">
                     <img 
                         src="https://scontent-mrs2-2.xx.fbcdn.net/v/t1.6435-9/120018768_10157227258165689_5630863612199507915_n.jpg?stp=dst-jpg_p526x296&_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=3fisF2a7kNsAX_WExsR&_nc_ht=scontent-mrs2-2.xx&oh=00_AfDISlLaGWik5cocKj2tk2sAI0vbbgAC3uN66xI7nyZNjA&oe=63C20DCE" 
                         alt="">
@@ -96,14 +113,14 @@
     <section class="contact-section">
         <div>
             <h3 class="contact-titre">Contactez-moi</h3>
-            <p class="contact-infos">meline.pischedda@gmail.com</p>
-            <p class="contact-infos">06 23 36 90 92</p>
+            <p class="contact-infos"><a href="mailto:meline.pischedda@gmail.com" >meline.pischedda@gmail.com</a></p>
+            <p class="contact-infos"><a href="tel:0623369092">06 23 36 90 92</a></p>
             <p class="contact-infos">Aix-en-Provence</p>
         </div>
     </section>
 
     <footer>
-        Copyright © <span class="footer-year">2022</span> Méline Pischedda
+        Copyright © <span class="footer-year">2023</span> Méline Pischedda
     </footer>
 
     <script type="text/javascript" src="app.js"></script>

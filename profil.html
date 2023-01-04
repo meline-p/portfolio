@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
   integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
   crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
 
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
@@ -27,27 +27,44 @@
         <div class="nav-brand">
             <h1><i class="fa-solid fa-mug-hot"></i> Méline Pischedda</h1>
         </div>
-            <div class="nav-link">
+            <div class="nav-link" id="main-nav">
                 <a href="index.html">Home</a>
                 <a href="projects.html">Portfolio</a>
-                <a href="#">Profil</a>
+                <a href="profil.html">Profil</a>
+                <a href="javascript:void(0);" class="icon" onclick="responsiveMainNav()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
         </div>
+    </div>
 
 
+    <div class="container-link">
+        <div class="container-link-item">
+            <a href="https://www.linkedin.com/in/melinepischedda/" target="_blank" class="profile-link">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/meline-p" target="_blank"  class="profile-link">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/melinepischedda/" target="_blank"  class="profile-link">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+    </div>
 
-<div class="container-cv">
-    <div class="container-profil-info">
-      <div class="container-profil-header">
-        <h2 class="profil-info-titre">
-          Hello, je suis Méline, Développeuse Web et Artiste 3D.
-        </h2>
-        <p class="profil-intro">
-          Polyvalente, je suis diplômée en <span>Architecture d'intérieur</span>, en <span>Design Graphique</span> et en <span>Conception / Réalisation 3D</span>. <br />
-        </p>
-      </div>
 
-      <div class="container-profil-body">
+    <div class="container-cv">
+        <div class="container-profil-info">
+            <div class="container-profil-header">
+                <h2 class="profil-info-titre">
+                    Hello, je suis Méline, Développeuse Web et Artiste 3D.
+                </h2>
+                <p class="profil-intro">
+                Polyvalente, je suis diplômée en <span>Architecture d'intérieur</span>, en <span>Design Graphique</span> et en <span>Conception / Réalisation 3D</span>. <br />
+                </p>
+            </div>
+        <div class="container-profil-body">
 
         <p class="profil-dev">
           <span>Profil Dev</span> <br />
@@ -73,13 +90,29 @@
           <span><a class="profil-footer-3d" href="https://melinepischedda.wixsite.com/portfolio"> projets en 3D</a></span>, j'espère qu'il vous plaira !
         </p>
 
-      </div>
+    </div>
+    </div>
 
 
+    <div class="download-cv">
+        <button>Télécharger le CV</button>
+    </div>
 
+      
 
+    <section class="contact-section">
+        <div>
+            <h3 class="contact-titre">Contactez-moi</h3>
+            <p class="contact-infos"><a href="mailto:meline.pischedda@gmail.com" >meline.pischedda@gmail.com</a></p>
+            <p class="contact-infos"><a href="tel:0623369092">06 23 36 90 92</a></p>
+            <p class="contact-infos">Aix-en-Provence</p>
+        </div>
+    </section>
 
+    <footer>
+        Copyright © <span class="footer-year">2023</span> Méline Pischedda
+    </footer>
 
-      <script type="text/javascript" src="app.js"></script>
-    </body>
-    </html>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
