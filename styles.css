@@ -710,6 +710,10 @@ button:active {
     text-align: center;
     padding: 30px;
 }
+.download-cv a {
+    text-decoration: none;
+    color: var(--colorBlue);
+}
   
   @media only screen and (max-width: 900px) {
     /* For Tablets */
