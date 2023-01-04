@@ -434,6 +434,10 @@ body {
 .contact-section a {
     text-decoration: none;
     color: var(--colorWhite);
+    transition: color 0.2s ease-out;
+}
+.contact-section a:hover {
+    color: var(--colorBlue);
 }
 
 .contact-section h3 {
