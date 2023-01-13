@@ -1,8 +1,80 @@
 const projetsData =[
     {
+        title: "La Boutique Française",
+        type: "Full-Stack",
+        infos: "WIP - E-commerce PHP, Symfony, Xampp, Composer",
+        img: "https://www.beelights.gr/assets/images/empty-image.png",
+        id: 28,
+        url: "https://github.com/meline-p/LaBoutiqueFrancaise/tree/master",
+        active: true
+    },
+    {
+        title: "Landing Page Animations",
+        type: "Front-End",
+        infos: "Animations with Javascript and CSS, HTML/CSS, Javascript",
+        img: "img/LandingPageAnimations-img.png",
+        id: 27,
+        url: "https://meline-p.github.io/LandingPageAnimations/",
+        active: true
+    },
+    {
+        title: "Weather App API",
+        type: "Back-End",
+        infos: "What is the weather at your place? - HTML/CSS, Javascript, Node.js, Express.js, APIs",
+        img: "img/Weather-App-img.png",
+        id: 26,
+        url: "https://github.com/meline-p/Weather-App-BackEnd/tree/master",
+        active: true
+    },
+    {
+        title: "To Do List - Mongoose",
+        type: "Full-Stack",
+        infos: "Automated database hosted on Heroku and MongoDB Atlas - HTML/CSS, Javascript, Node.js, Express.js, EJS, MongoDB, Mongoose",
+        img: "img/ToDoList-BackEnd-img.png",
+        id: 25,
+        url: "https://github.com/meline-p/ToDoList-BackEnd/tree/master",
+        active: true
+    },
+    {
+        title: "Wiki App",
+        type: "Back-End",
+        infos: "Database Management with Studio 3T - HTML/CSS, Javascript, Node.js, Express.js, EJS, MongoDB, Mongoose",
+        img: "https://www.beelights.gr/assets/images/empty-image.png",
+        id: 24,
+        url: "https://github.com/meline-p/Wiki-API/tree/master",
+        active: true
+    },
+    {
+        title: "Newsletter SignUp",
+        type: "Back-End",
+        infos: "Hosted on Heroku, HTML/CSS, Bootstrap, Javascript, Node.js, Express.js, APIs",
+        img: "img/Newsletter-SignUp-img.png",
+        id: 23,
+        url: "https://github.com/meline-p/Newsletter-SignUp/tree/master",
+        active: true
+    },
+    {
+        title: "Movie App",
+        type: "Front-End",
+        infos: "Newest movies with filters - HTML/CSS, Javascript, APIs",
+        img: "img/Movie-App-img.png",
+        id: 22,
+        url: "https://meline-p.github.io/Movie-App/",
+        active: true
+    },
+    {
+        title: "BMI-Calculator",
+        type: "Back-End",
+        infos: "HTML/CSS, Javascript, Node.js, Express.js",
+        img: "https://www.beelights.gr/assets/images/empty-image.png",
+        id: 21,
+        url: "https://github.com/meline-p/BMI-Calculator/",
+        active: true
+    },
+    {
         title: "The Simon Game",
         type: "Front-End",
-        infos: "Javascript Challenge Project",
+        infos: "Memorize the combination as long as possible - HTML/CSS, Javascript, jQuery",
         img: "https://meline-p.github.io/Ressources/images/Pojets-img/TheSimonGame-img.png",
         id: 20,
         url: "https://meline-p.github.io/The-Simon-Game/",
@@ -11,16 +83,16 @@ const projetsData =[
     {
         title: "Blog Website",
         type: "Back-End",
-        infos: "React App",
-        img: "https://www.beelights.gr/assets/images/empty-image.png",
+        infos: "Blogging, creation of publications - HTML/CSS, Javascript, Node.js, Express.js, EJS",
+        img: "img/Blog-Website-img.png",
         id: 19,
-        url: "",
+        url: "https://github.com/meline-p/Blog-Website/tree/master",
         active: true
     },
     {
         title: "Chrono Pomodoro",
         type: "Front-End",
-        infos: "React App",
+        infos: "Are you ready ? Let's go! - React App",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/Chrono-Pomodoro-img.png",
         id: 18,
         url: "https://f5frcm.csb.app/",
@@ -29,7 +101,7 @@ const projetsData =[
     {
         title: "React Animations",
         type: "Front-End",
-        infos: "React App",
+        infos: "Three different animations with React - React App",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/React-Animations-img.png",
         id: 17,
         url: "https://g4jflv.csb.app/",
@@ -38,7 +110,7 @@ const projetsData =[
     {
         title: "E-Commerce",
         type: "Front-End",
-        infos: "React App",
+        infos: "Not enough code ? Drink it. - React App",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/E-Commerce-img.png",
         id: 16,
         url: "https://exzire.csb.app/",
@@ -47,7 +119,7 @@ const projetsData =[
     {
         title: "Drum Kit",
         type: "Front-End",
-        infos: "Javascript Project Challenge",
+        infos: "Make some noise! - HTML/CSS, Javascript",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/Drum-Kit-img.png",
         id: 15,
         url: "https://meline-p.github.io/Drum-Kit/",
@@ -56,7 +128,7 @@ const projetsData =[
     {
         title: "Multi-Langs Website",
         type: "Front-End",
-        infos: "React App",
+        infos: "How many languages ​​do you speak ? - React App",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/Multi-Langs-Website-img.png",
         id: 14,
         url: "https://5bft3n.csb.app/",
@@ -65,7 +137,7 @@ const projetsData =[
     {
         title: "Coworking Website",
         type: "Front-End",
-        infos: "",
+        infos: "A place of work and sharing - HTML/CSS, Javascript",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/Coworking-Website-img.png",
         id: 13,
         url: "https://meline-p.github.io/Coworking-Website/",
@@ -74,7 +146,7 @@ const projetsData =[
     {
         title: "Keeper App",
         type: "Front-End",
-        infos: "React App",
+        infos: "Note all your thoughts - React, HTML/CSS, Javascript ES6, jsx",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/Keeper-App-img.png",
         id: 12,
         url: "https://z81be1.csb.app/",
@@ -83,7 +155,7 @@ const projetsData =[
     {
         title: "Snake",
         type: "Front-End",
-        infos: "Javascript Project Challenge",
+        infos: "Try to reach 50 points! - HTML/CSS, Javascript",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/Snake-img.png",
         id: 11,
         url: "https://meline-p.github.io/Snake-Game/",
@@ -92,7 +164,7 @@ const projetsData =[
     {
         title: "To Do List",
         type: "Front-End",
-        infos: "React App",
+        infos: "Did you buy the bread? - React App",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/To-Do-List-img.png",
         id: 10,
         url: "https://uf86si.csb.app/",
@@ -101,7 +173,7 @@ const projetsData =[
     {
         title: "Quizz App",
         type: "Front-End",
-        infos: "Javascript Project Challenge",
+        infos: "So, did you get it right? - HTML/CSS, Javascript, DOM",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/Quizz-App-img.png",
         id: 9,
         url: "https://meline-p.github.io/Quizz-App/",
@@ -110,7 +182,7 @@ const projetsData =[
     {
         title: "Emojipedia",
         type: "Front-End",
-        infos: "React App",
+        infos: "Emoji Librairy - React, HTML/CSS, Javascript ES6, jsx",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/Emojipedia-img.png",
         id: 8,
         url: "https://polr7z.csb.app/",
@@ -119,7 +191,7 @@ const projetsData =[
     {
         title: "Countdown Timer",
         type: "Front-End",
-        infos: "Javascript Project Challenge",
+        infos: "Countdown to Christmas - HTML/CSS, Javascript, DOM",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/Countdown-Timer-img.png",
         id: 7,
         url: "https://meline-p.github.io/Countdown-Timer/",
@@ -128,7 +200,7 @@ const projetsData =[
     {
         title: "Analog App",
         type: "Front-End",
-        infos: "Javascript Project Challenge",
+        infos: "What time is it? - HTML/CSS, Javascript, DOM",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/Analog-App-img.png",
         id: 6,
         url: "https://meline-p.github.io/Analog-App/",
@@ -137,7 +209,7 @@ const projetsData =[
     {
         title: "Dicee Game",
         type: "Front-End",
-        infos: "Javascript Project Challenge",
+        infos: "Refresh to see the winner ! - HTML/CSS, Javascript, DOM",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/Dicee-Game-img.png",
         id: 5,
         url: "https://meline-p.github.io/Dicee-Game/",
@@ -146,16 +218,16 @@ const projetsData =[
     {
         title: "Secret Project",
         type: "Full-Stack",
-        infos: "",
-        img: "https://www.beelights.gr/assets/images/empty-image.png",
+        infos: "Project to learn more about Authentication and Security - HTML/CSS, Javascript, Node.js, Express.js, EJS, MongoDB, Mongoose",
+        img: "img/Secrets-Projects-img.png",
         id: 4,
-        url: "",
+        url: "https://github.com/meline-p/Secret-Project",
         active: true
     },
     {
         title: "TinDog",
         type: "Front-End",
-        infos: "Project to practice Bootstrap",
+        infos: "Hot dogs nearby - HTML/CSS, Bootstrap",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/Tindog-img.png",
         id: 3,
         url: "https://meline-p.github.io/TinDog/",
@@ -164,7 +236,7 @@ const projetsData =[
     {
         title: "Travel Agency",
         type: "Front-End",
-        infos: "Landing Page with HTML/CSS",
+        infos: "Desire to escape ? - HTML/CSS",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/Travel-Agency-img.png",
         id: 2,
         url: "https://meline-p.github.io/Travel-Agency/",
@@ -173,7 +245,7 @@ const projetsData =[
     {
         title: "Recipies",
         type: "Front-End",
-        infos: "Get deeper into CSS",
+        infos: "The best chocolate cake - HTML/CSS, Responsive design",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/Recipies-img.png",
         id: 1,
         url: "https://meline-p.github.io/Recipies/",
@@ -315,4 +387,3 @@ function responsiveMainNav() {
       x.className = "nav-link";
     }
   }
-
