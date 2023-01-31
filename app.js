@@ -253,6 +253,10 @@ const projetsData =[
     }
 ]
 
+var navHome = document.querySelector(".nav-home");
+var navPortfolio = document.querySelector(".nav-portfolio");
+var navProfil = document.querySelector(".nav-profil");
+
 var projectGroup = document.querySelector(".projects-group");
 
 var projectItem = document.querySelector(".project-item");
@@ -264,6 +268,11 @@ var projectURL = document.querySelector(".project-link");
 
 var button = document.querySelectorAll("button")
 
+var allButton = document.querySelector(".all-btn");
+var feButton = document.querySelector(".fe-btn");
+var beButton = document.querySelector(".be-btn");
+var fsButton = document.querySelector(".fs-btn");
+
 var homeScroll = document.querySelector(".home-scroll");
 
 var projectTypeFe = projetsData.filter(function (project) {
@@ -274,7 +283,32 @@ var projectTypeBe  = projetsData.filter(function (project) {
 })
 var projectTypeFs  = projetsData.filter(function (project) {
     return project.type === "Full-Stack"
-  })
+})
+
+feButton.addEventListener("click",() => {
+    allButton.classList.remove("button-active");
+    beButton.classList.remove("button-active");
+    fsButton.classList.remove("button-active");
+    feButton.classList.add("button-active");
+})
+beButton.addEventListener("click",() => {
+    allButton.classList.remove("button-active");
+    feButton.classList.remove("button-active");
+    fsButton.classList.remove("button-active");
+    beButton.classList.add("button-active");
+})
+fsButton.addEventListener("click",() => {
+    allButton.classList.remove("button-active");
+    beButton.classList.remove("button-active");
+    feButton.classList.remove("button-active");
+    fsButton.classList.add("button-active");
+})
+allButton.addEventListener("click",() => {
+    feButton.classList.remove("button-active");
+    beButton.classList.remove("button-active");
+    fsButton.classList.remove("button-active");
+    allButton.classList.add("button-active");
+})
 
 // Map pour tous les projets 
 function spreadProjects() {
@@ -386,4 +420,21 @@ function responsiveMainNav() {
     } else {
       x.className = "nav-link";
     }
-  }
+}
+
+// document.querySelector(".nav-home").addEventListener("click", (event) => {
+    // navPortfolio.classList.remove("nav-item-active");
+    // navProfil.classList.remove("nav-item-active");
+    // navHome.classList.add("nav-item-active");
+
+// })
+// navPortfolio.addEventListener("click", () => {
+//     navHome.classList.remove("nav-item-active");
+//     navProfil.classList.remove("nav-item-active");
+//     navPortfolio.classList.add("nav-item-active");
+// })
+// navProfil.addEventListener("click", () => {
+//     navHome.classList.remove("nav-item-active");
+//     navPortfolio.classList.remove("nav-item-active");
+//     navProfil.classList.add("nav-item-active");
+// })

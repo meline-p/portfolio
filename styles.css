@@ -50,7 +50,7 @@ body {
     overflow: hidden;
 }
 
-.nav-link a {
+.nav-item {
     color: var(--colorBlue);
     display: inline;
    text-decoration: none; 
@@ -58,11 +58,16 @@ body {
    text-transform: uppercase;
    text-align: left;
 }
-.nav-link a:hover {
+.nav-item:hover {
     color: var(--colorRose);
 }
-.nav-link a:active {
+.nav-item-active {
     color: var(--colorRose);
+    display: inline;
+   text-decoration: none; 
+   padding: 20px;
+   text-transform: uppercase;
+   text-align: left;
 }
 
 .nav-link .icon {
@@ -528,9 +533,10 @@ button {
     transition: border-bottom 0.1s ease-out;
 }
 button:hover {
+    color: var(--colorBlue);
     border-bottom: 3px solid var(--colorBlue);
 }
-button:active {
+.button-active {
     color: var(--colorRose);
     border-bottom: 3px solid var(--colorRose);
 }
