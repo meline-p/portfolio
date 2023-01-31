@@ -2,8 +2,8 @@ const projetsData =[
     {
         title: "La Boutique Française",
         type: "Full-Stack",
-        infos: "WIP - E-commerce PHP, Symfony, Xampp, Composer",
-        img: "https://www.beelights.gr/assets/images/empty-image.png",
+        infos: "E-commerce PHP, Symfony, Xampp, Composer",
+        img: "img/La-Boutique-Francaise-img.png",
         id: 28,
         url: "https://github.com/meline-p/LaBoutiqueFrancaise/tree/master",
         active: true
