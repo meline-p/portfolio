@@ -602,9 +602,9 @@ button:hover {
 }
 
 @media (max-width: 900px) {
-    button {
+    /* button {
         border-bottom: 3px solid var(--colorBlue);
-    }
+    } */
 }
 
 @media (max-width: 500px) {
