@@ -50,7 +50,7 @@ body {
     overflow: hidden;
 }
 
-.nav-item {
+.nav-link a {
     color: var(--colorBlue);
     display: inline;
    text-decoration: none; 
@@ -58,7 +58,7 @@ body {
    text-transform: uppercase;
    text-align: left;
 }
-.nav-item:hover {
+.nav-link a:hover {
     color: var(--colorRose);
 }
 .nav-item-active {
