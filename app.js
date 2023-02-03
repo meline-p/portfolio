@@ -1,5 +1,14 @@
 const projetsData =[
     {
+        title: "Tea'kTak - Take a tea break",
+        type: "Full-Stack",
+        infos: "(WIP) E-Commerce in Prestashop, hosted on LWS",
+        img: "img/TeakTak-img.png",
+        id: 29,
+        url: "https://teaktak.site/",
+        active: true
+    },
+    {
         title: "La Boutique Française",
         type: "Full-Stack",
         infos: "E-commerce PHP, Symfony, Xampp, Composer",
