@@ -555,6 +555,7 @@ button:hover {
 }
 
 .project-item {
+    z-index: 0;
     margin: 10px 0 30px;
     padding: 20px;
     width: 350px;
@@ -599,6 +600,22 @@ button:hover {
 .project-description {
     font-size: 15px;
     color: var(--colorBlue);
+}
+
+.projects-links-down-p{
+    font-size: 12px;
+}
+
+.project-links-down{
+    color: var(--colorRose);
+    font-weight: bold;
+    z-index: 1;
+}
+.project-links-down:hover{
+    color: var(--colorBlue);
+}
+.disabled{
+    color: grey;
 }
 
 @media (max-width: 900px) {
