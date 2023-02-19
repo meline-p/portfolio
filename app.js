@@ -1,7 +1,17 @@
 const projetsData =[
     {
+        title: "Word Clock",
+        type: "Front-End",
+        infos: "(WIP) Chic way to display the time - HTML/CSS, Javascript",
+        img: "img/Word-Clock-img.png",
+        id: 30,
+        urlCode: "https://github.com/meline-p/WordClock",
+        urlSite : "https://meline-p.github.io/WordClock/" ,
+        active: true
+    },
+    {
         title: "Tea'kTak - Take a tea break",
-        type: "Full-Stack",
+        type: "CMS",
         infos: "(WIP) E-Commerce in Prestashop, hosted on LWS",
         img: "img/TeakTak-img.png",
         id: 29,
@@ -36,6 +46,7 @@ const projetsData =[
         img: "img/Weather-App-img.png",
         id: 26,
         urlCode: "https://github.com/meline-p/Weather-App-BackEnd/tree/master",
+        urlSite : "" ,
         active: true
     },
     {
@@ -114,8 +125,8 @@ const projetsData =[
         infos: "Are you ready ? Let's go! - React App",
         img:"https://meline-p.github.io/Ressources/images/Pojets-img/Chrono-Pomodoro-img.png",
         id: 18,
-        urlCode: "https://f5frcm.csb.app/",
-        urlSite : "" ,
+        urlCode: "https://github.com/meline-p/Chrono-Pomodoro",
+        urlSite : "https://f5frcm.csb.app/" ,
         active: true
     },
     {
@@ -347,11 +358,42 @@ allButton.addEventListener("click",() => {
     allButton.classList.add("button-active");
 })
 
+
+
 // Map pour tous les projets 
 function spreadProjects() {
     projectGroup.innerHTML = '';
     projetsData.map(project => {
         const {title, type, infos, img, urlCode, urlSite, id} = project;
+
+        function linkToSite(){
+            if (urlSite != ''){
+                return (`<a class="project-links-down" href="${urlSite}" target="_blank">Voir le site</a>`)
+            } else {
+                return (`<a class="disabled" >Voir le site</a>`)
+            }
+        }
+
+        function linkToCode(){
+            if (urlCode != ''){
+                return (`<a class="project-links-down" href="${urlCode}" target="_blank"> Voir le code </a>`)
+            } else {
+                return (`<a class="disabled" >Voir le code</a>`)
+            }
+        }
+
+        function whatType(){
+            if (type === "Front-End"){
+                return (`<p class="project-badge-fe">Front-End</p>`)
+            } else if (type === "Back-End"){
+                return (`<p class="project-badge-be">Back-End</p>`)
+            } else if (type === "Full-Stack"){
+                return (`<p class="project-badge-fs">Full-Stack</p>`)
+            } else if (type === "CMS"){
+                return (`<p class="project-badge">CMS</p>`)
+            }
+        }
+
         const projectEl = document.createElement('div');
         projectEl.classList.add("project-item");
         projectEl.innerHTML =`
@@ -360,13 +402,13 @@ function spreadProjects() {
                 <img class="project-img" src="${img}" alt="img-${id}">
                 <div class="project-card-info">
                     <h3 class="project-title">${title}</h3>
-                    <div class="project-badge">
-                        <p style="background-color: ${type} === "Front-End" ? green : ${type} === "Back-End" ? yellow : blue">${type}</p>
+                    <div>
+                        ${whatType()}
                     </div>
                     <p class="project-description">${infos}</p>
                 </div>
                 <div class="project-card-info"> 
-                    <p class="projects-links-down-p"><a class="project-links-down" href="${urlSite}" target="_blank">Voir le site</a> | <a class="project-links-down" href="${urlCode}" target="_blank"> Voir le code </a> </p>
+                    <p class="projects-links-down-p"> ${linkToSite()} | ${linkToCode()} </p>
                 </div>
             </div>
         </a>
@@ -377,23 +419,55 @@ function spreadProjects() {
 
 spreadProjects();
 
-
+// Map pour les projets front-end
 function handleClickFe() {
     projectGroup.innerHTML = '';
     projectTypeFe.map(project => {
-        const {title, type, infos, img, url, id} = project;
+        const {title, type, infos, img, urlCode, urlSite, id} = project;
+
+        function linkToSite(){
+            if (urlSite != ''){
+                return (`<a class="project-links-down" href="${urlSite}" target="_blank">Voir le site</a>`)
+            } else {
+                return (`<a class="disabled" >Voir le site</a>`)
+            }
+        }
+
+        function linkToCode(){
+            if (urlCode != ''){
+                return (`<a class="project-links-down" href="${urlCode}" target="_blank"> Voir le code </a>`)
+            } else {
+                return (`<a class="disabled" >Voir le code</a>`)
+            }
+        }
+
+        function whatType(){
+            if (type === "Front-End"){
+                return (`<p class="project-badge-fe">Front-End</p>`)
+            } else if (type === "Back-End"){
+                return (`<p class="project-badge-be">Back-End</p>`)
+            } else if (type === "Full-Stack"){
+                return (`<p class="project-badge-fs">Full-Stack</p>`)
+            } else if (type === "CMS"){
+                return (`<p class="project-badge">CMS</p>`)
+            }
+        }
+
         const projectEl = document.createElement('div');
         projectEl.classList.add("project-item");
         projectEl.innerHTML =`
-        <a class="project-link" href="${url}" target="_blank">
+        <a class="project-link" href="${urlSite}" target="_blank">
             <div class="project-card">
                 <img class="project-img" src="${img}" alt="img-${id}">
                 <div class="project-card-info">
                     <h3 class="project-title">${title}</h3>
-                    <div class="project-badge">
-                        <p style="background-color: ${type} === "Front-End" ? green : ${type} === "Back-End" ? yellow : blue">${type}</p>
+                    <div>
+                        ${whatType()}
                     </div>
                     <p class="project-description">${infos}</p>
+                </div>
+                <div class="project-card-info"> 
+                    <p class="projects-links-down-p"> ${linkToSite()} | ${linkToCode()} </p>
                 </div>
             </div>
         </a>
@@ -401,23 +475,54 @@ function handleClickFe() {
         projectGroup.appendChild(projectEl);
     });
 }
-
+// Map pour les projets back-end
 function handleClickBe() {
     projectGroup.innerHTML = '';
     projectTypeBe.map(project => {
-        const {title, type, infos, img, url, id} = project;
+        const {title, type, infos, img, urlCode, urlSite, id} = project;
+        function linkToSite(){
+            if (urlSite != ''){
+                return (`<a class="project-links-down" href="${urlSite}" target="_blank">Voir le site</a>`)
+            } else {
+                return (`<a class="disabled" >Voir le site</a>`)
+            }
+        }
+
+        function linkToCode(){
+            if (urlCode != ''){
+                return (`<a class="project-links-down" href="${urlCode}" target="_blank"> Voir le code </a>`)
+            } else {
+                return (`<a class="disabled" >Voir le code</a>`)
+            }
+        }
+
+        function whatType(){
+            if (type === "Front-End"){
+                return (`<p class="project-badge-fe">Front-End</p>`)
+            } else if (type === "Back-End"){
+                return (`<p class="project-badge-be">Back-End</p>`)
+            } else if (type === "Full-Stack"){
+                return (`<p class="project-badge-fs">Full-Stack</p>`)
+            } else if (type === "CMS"){
+                return (`<p class="project-badge">CMS</p>`)
+            }
+        }
+
         const projectEl = document.createElement('div');
         projectEl.classList.add("project-item");
         projectEl.innerHTML =`
-        <a class="project-link" href="${url}" target="_blank">
+        <a class="project-link" href="${urlSite}" target="_blank">
             <div class="project-card">
                 <img class="project-img" src="${img}" alt="img-${id}">
                 <div class="project-card-info">
                     <h3 class="project-title">${title}</h3>
-                    <div class="project-badge">
-                        <p style="background-color: ${type} === "Front-End" ? green : ${type} === "Back-End" ? yellow : blue">${type}</p>
+                    <div>
+                        ${whatType()}
                     </div>
                     <p class="project-description">${infos}</p>
+                </div>
+                <div class="project-card-info"> 
+                    <p class="projects-links-down-p"> ${linkToSite()} | ${linkToCode()} </p>
                 </div>
             </div>
         </a>
@@ -425,23 +530,55 @@ function handleClickBe() {
         projectGroup.appendChild(projectEl);
     });
 }
-
+// Map pour les projets full-stack
 function handleClickFs() {
     projectGroup.innerHTML = '';
     projectTypeFs.map(project => {
-        const {title, type, infos, img, url, id} = project;
+        const {title, type, infos, img, urlCode, urlSite, id} = project;
+
+        function linkToSite(){
+            if (urlSite != ''){
+                return (`<a class="project-links-down" href="${urlSite}" target="_blank">Voir le site</a>`)
+            } else {
+                return (`<a class="disabled" >Voir le site</a>`)
+            }
+        }
+
+        function linkToCode(){
+            if (urlCode != ''){
+                return (`<a class="project-links-down" href="${urlCode}" target="_blank"> Voir le code </a>`)
+            } else {
+                return (`<a class="disabled" >Voir le code</a>`)
+            }
+        }
+
+        function whatType(){
+            if (type === "Front-End"){
+                return (`<p class="project-badge-fe">Front-End</p>`)
+            } else if (type === "Back-End"){
+                return (`<p class="project-badge-be">Back-End</p>`)
+            } else if (type === "Full-Stack"){
+                return (`<p class="project-badge-fs">Full-Stack</p>`)
+            } else if (type === "CMS"){
+                return (`<p class="project-badge">CMS</p>`)
+            }
+        }
+
         const projectEl = document.createElement('div');
         projectEl.classList.add("project-item");
         projectEl.innerHTML =`
-        <a class="project-link" href="${url}" target="_blank">
+        <a class="project-link" href="${urlSite}" target="_blank">
             <div class="project-card">
                 <img class="project-img" src="${img}" alt="img-${id}">
                 <div class="project-card-info">
                     <h3 class="project-title">${title}</h3>
-                    <div class="project-badge">
-                        <p style="background-color: ${type} === "Front-End" ? green : ${type} === "Back-End" ? yellow : blue">${type}</p>
+                    <div>
+                        ${whatType()}
                     </div>
                     <p class="project-description">${infos}</p>
+                </div>
+                <div class="project-card-info"> 
+                    <p class="projects-links-down-p"> ${linkToSite()} | ${linkToCode()} </p>
                 </div>
             </div>
         </a>
