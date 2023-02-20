@@ -26,7 +26,7 @@ const projetsData =[
         img: "img/La-Boutique-Francaise-img.png",
         id: 28,
         urlCode: "https://github.com/meline-p/LaBoutiqueFrancaise/tree/master",
-        urlSite : "https://youtu.be/uOpW_BTqQH4",
+        urlSite : "https://youtu.be/3OTSZi2zv08",
         active: true
     },
     {
