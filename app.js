@@ -1,8 +1,18 @@
 const projetsData =[
     {
+        title: "Payment Card Form",
+        type: "Front-End",
+        infos: "Enter your card informations - HTML/CSS, Javascript",
+        img: "img/Payment-Card-Form-img.png",
+        id: 31,
+        urlCode: "https://github.com/meline-p/Payment-Card-Form",
+        urlSite : "https://meline-p.github.io/Payment-Card-Form/" ,
+        active: true
+    },
+    {
         title: "Word Clock",
         type: "Front-End",
-        infos: "(WIP) Chic way to display the time - HTML/CSS, Javascript",
+        infos: "Chic way to display the time - HTML/CSS, Javascript",
         img: "img/Word-Clock-img.png",
         id: 30,
         urlCode: "https://github.com/meline-p/WordClock",
@@ -56,19 +66,19 @@ const projetsData =[
         img: "img/ToDoList-BackEnd-img.png",
         id: 25,
         urlCode: "https://github.com/meline-p/ToDoList-BackEnd/tree/master",
-        urlSite : "" ,
+        urlSite : "https://www.youtube.com/watch?v=6KzAAghIGns" ,
         active: true
     },
-    {
-        title: "Wiki App",
-        type: "Back-End",
-        infos: "Database Management with Studio 3T - HTML/CSS, Javascript, Node.js, Express.js, EJS, MongoDB, Mongoose",
-        img: "https://www.beelights.gr/assets/images/empty-image.png",
-        id: 24,
-        urlCode: "https://github.com/meline-p/Wiki-API/tree/master",
-        urlSite : "" ,
-        active: true
-    },
+    // {
+    //     title: "Wiki App",
+    //     type: "Back-End",
+    //     infos: "Database Management with Studio 3T - HTML/CSS, Javascript, Node.js, Express.js, EJS, MongoDB, Mongoose",
+    //     img: "https://www.beelights.gr/assets/images/empty-image.png",
+    //     id: 24,
+    //     urlCode: "https://github.com/meline-p/Wiki-API/tree/master",
+    //     urlSite : "" ,
+    //     active: true
+    // },
     {
         title: "Newsletter SignUp",
         type: "Back-End",
@@ -76,7 +86,7 @@ const projetsData =[
         img: "img/Newsletter-SignUp-img.png",
         id: 23,
         urlCode: "https://github.com/meline-p/Newsletter-SignUp/tree/master",
-        urlSite : "" ,
+        urlSite : "https://www.youtube.com/watch?v=54RG2HHmRXk" ,
         active: true
     },
     {
@@ -116,7 +126,7 @@ const projetsData =[
         img: "img/Blog-Website-img.png",
         id: 19,
         urlCode: "https://github.com/meline-p/Blog-Website/tree/master",
-        urlSite : "" ,
+        urlSite : "https://www.youtube.com/watch?v=osQf2NwlIrQ" ,
         active: true
     },
     {
@@ -266,7 +276,7 @@ const projetsData =[
         img: "img/Secrets-Projects-img.png",
         id: 4,
         urlCode: "https://github.com/meline-p/Secret-Project",
-        urlSite : "" ,
+        urlSite : "https://www.youtube.com/watch?v=SDyl0P3C7ao" ,
         active: true
     },
     {
