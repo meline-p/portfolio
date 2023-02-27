@@ -9,16 +9,16 @@ const projetsData =[
         urlSite : "https://meline-p.github.io/Calculator/" ,
         active: true
     },
-    {
-        title: "Payment Card Form",
-        type: "Front-End",
-        infos: "Enter your card informations - HTML/CSS, Javascript",
-        img: "img/Payment-Card-Form-img.png",
-        id: 31,
-        urlCode: "https://github.com/meline-p/Payment-Card-Form",
-        urlSite : "https://www.youtube.com/watch?v=UfhWMG9hHJw" ,
-        active: true
-    },
+    // {
+    //     title: "Payment Card Form",
+    //     type: "Front-End",
+    //     infos: "Enter your card informations - HTML/CSS, Javascript",
+    //     img: "img/Payment-Card-Form-img.png",
+    //     id: 31,
+    //     urlCode: "https://github.com/meline-p/Payment-Card-Form",
+    //     urlSite : "https://www.youtube.com/watch?v=UfhWMG9hHJw" ,
+    //     active: true
+    // },
     {
         title: "Word Clock",
         type: "Front-End",
