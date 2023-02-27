@@ -1,5 +1,15 @@
 const projetsData =[
     {
+        title: "Calculator",
+        type: "Front-End",
+        infos: "Hello mathematicians - HTML/CSS, Javascript",
+        img: "img/Calculator-img.png",
+        id: 32,
+        urlCode: "https://github.com/meline-p/Calculator",
+        urlSite : "https://meline-p.github.io/Calculator/" ,
+        active: true
+    },
+    {
         title: "Payment Card Form",
         type: "Front-End",
         infos: "Enter your card informations - HTML/CSS, Javascript",
