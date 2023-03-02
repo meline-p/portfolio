@@ -417,7 +417,7 @@ function spreadProjects() {
         const projectEl = document.createElement('div');
         projectEl.classList.add("project-item");
         projectEl.innerHTML =`
-        <a class="project-link" href="${urlSite}" target="_blank">
+        <a class="project-link" href="" target="_blank">
             <div class="project-card">
                 <img class="project-img" src="${img}" alt="img-${id}">
                 <div class="project-card-info">
@@ -428,7 +428,7 @@ function spreadProjects() {
                     <p class="project-description">${infos}</p>
                 </div>
                 <div class="project-card-info"> 
-                    <p class="projects-links-down-p"> ${linkToSite()} | ${linkToCode()} </p>
+                    <p class="projects-links-down-p">  |  </p>
                 </div>
             </div>
         </a>
@@ -476,7 +476,7 @@ function handleClickFe() {
         const projectEl = document.createElement('div');
         projectEl.classList.add("project-item");
         projectEl.innerHTML =`
-        <a class="project-link" href="${urlSite}" target="_blank">
+        <a class="project-link" href="" target="_blank">
             <div class="project-card">
                 <img class="project-img" src="${img}" alt="img-${id}">
                 <div class="project-card-info">
@@ -487,7 +487,7 @@ function handleClickFe() {
                     <p class="project-description">${infos}</p>
                 </div>
                 <div class="project-card-info"> 
-                    <p class="projects-links-down-p"> ${linkToSite()} | ${linkToCode()} </p>
+                    <p class="projects-links-down-p">  |  </p>
                 </div>
             </div>
         </a>
@@ -531,7 +531,7 @@ function handleClickBe() {
         const projectEl = document.createElement('div');
         projectEl.classList.add("project-item");
         projectEl.innerHTML =`
-        <a class="project-link" href="${urlSite}" target="_blank">
+        <a class="project-link" href="" target="_blank">
             <div class="project-card">
                 <img class="project-img" src="${img}" alt="img-${id}">
                 <div class="project-card-info">
@@ -542,7 +542,7 @@ function handleClickBe() {
                     <p class="project-description">${infos}</p>
                 </div>
                 <div class="project-card-info"> 
-                    <p class="projects-links-down-p"> ${linkToSite()} | ${linkToCode()} </p>
+                    <p class="projects-links-down-p">  |  </p>
                 </div>
             </div>
         </a>
@@ -587,7 +587,7 @@ function handleClickFs() {
         const projectEl = document.createElement('div');
         projectEl.classList.add("project-item");
         projectEl.innerHTML =`
-        <a class="project-link" href="${urlSite}" target="_blank">
+        <a class="project-link" href="" target="_blank">
             <div class="project-card">
                 <img class="project-img" src="${img}" alt="img-${id}">
                 <div class="project-card-info">
@@ -598,7 +598,7 @@ function handleClickFs() {
                     <p class="project-description">${infos}</p>
                 </div>
                 <div class="project-card-info"> 
-                    <p class="projects-links-down-p"> ${linkToSite()} | ${linkToCode()} </p>
+                    <p class="projects-links-down-p">  | </p>
                 </div>
             </div>
         </a>
