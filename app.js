@@ -1,5 +1,35 @@
 const projetsData =[
     {
+        title: "PHP Blog",
+        type: "Full-Stack",
+        infos: "OC project - Blog in PHP with MVC Architecture",
+        img: "img/Blog-Php-img.png",
+        id: 34,
+        urlCode: "https://github.com/meline-p/blog_php",
+        urlSite : "https://youtu.be/HTL0RWlN7ys" ,
+        active: true
+    },
+    {
+        title: "Outdoor film festival",
+        type: "Front-End",
+        infos: "OC project - HTML/CSS",
+        img: "img/Festival-Films-Plein-Air-img.png",
+        id: 34,
+        urlCode: "https://github.com/meline-p/festival-films-plein-air",
+        urlSite : "https://meline-p.github.io/festival-films-plein-air/" ,
+        active: true
+    },
+    {
+        title: "VR Xperience",
+        type: "Front-End",
+        infos: "Learning CSS animations - HTML/CSS",
+        img: "img/VR-Xperience-img.png",
+        id: 33,
+        urlCode: "https://github.com/meline-p/vr-xperience",
+        urlSite : "https://meline-p.github.io/vr-xperience/" ,
+        active: true
+    },
+    {
         title: "Calculator",
         type: "Front-End",
         infos: "Hello mathematicians - HTML/CSS, Javascript",
@@ -27,16 +57,6 @@ const projetsData =[
         id: 30,
         urlCode: "https://github.com/meline-p/WordClock",
         urlSite : "https://meline-p.github.io/WordClock/" ,
-        active: true
-    },
-    {
-        title: "Tea'kTak - Take a tea break",
-        type: "CMS",
-        infos: "(WIP) E-Commerce in Prestashop, hosted on LWS",
-        img: "img/TeakTak-img.png",
-        id: 29,
-        urlCode: "",
-        urlSite : "https://teaktak.site/" ,
         active: true
     },
     {
@@ -79,16 +99,6 @@ const projetsData =[
         urlSite : "https://www.youtube.com/watch?v=6KzAAghIGns" ,
         active: true
     },
-    // {
-    //     title: "Wiki App",
-    //     type: "Back-End",
-    //     infos: "Database Management with Studio 3T - HTML/CSS, Javascript, Node.js, Express.js, EJS, MongoDB, Mongoose",
-    //     img: "https://www.beelights.gr/assets/images/empty-image.png",
-    //     id: 24,
-    //     urlCode: "https://github.com/meline-p/Wiki-API/tree/master",
-    //     urlSite : "" ,
-    //     active: true
-    // },
     {
         title: "Newsletter SignUp",
         type: "Back-End",
