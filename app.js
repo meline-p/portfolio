@@ -2,7 +2,7 @@ const projetsData =[
     {
         title: "PHP Blog",
         type: "Full-Stack",
-        infos: "OC project - Blog in PHP with MVC Architecture",
+        infos: "Blog in PHP with MVC Architecture",
         img: "img/Blog-Php-img.png",
         id: 34,
         urlCode: "https://github.com/meline-p/blog_php",
@@ -12,7 +12,7 @@ const projetsData =[
     {
         title: "Outdoor film festival",
         type: "Front-End",
-        infos: "OC project - HTML/CSS",
+        infos: "Animated website mockup - HTML/CSS",
         img: "img/Festival-Films-Plein-Air-img.png",
         id: 34,
         urlCode: "https://github.com/meline-p/festival-films-plein-air",
