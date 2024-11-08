@@ -1,5 +1,25 @@
 const projetsData =[
     {
+        title: "BileMo",
+        type: "Back-End",
+        infos: "API REST with PHP Symfony",
+        img: "img/bilemo-img.png",
+        id: 36,
+        urlCode: "https://github.com/meline-p/bilemo",
+        urlSite : "https://youtu.be/JAa9M4y1WT8" ,
+        active: true
+    },
+    {
+        title: "SnowTricks",
+        type: "Full-Stack",
+        infos: "Collaborative website in PHP Symfony",
+        img: "img/snowtricks-img.png",
+        id: 35,
+        urlCode: "https://github.com/meline-p/snowtricks",
+        urlSite : "https://youtu.be/f3b9RTCpzLI" ,
+        active: true
+    },
+    {
         title: "PHP Blog",
         type: "Full-Stack",
         infos: "Blog in PHP with MVC Architecture",

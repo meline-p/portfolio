@@ -696,7 +696,7 @@ button:hover {
     display: grid;
     grid-template-areas:
       "dev troisd"
-      "foot troisd";
+      "foot foot";
     gap: 20px;
     text-align: left;
   }
