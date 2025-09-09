@@ -1,5 +1,25 @@
 const projetsData =[
     {
+        title: "Stock Manager",
+        type: "Full-Stack",
+        infos: "Full-stack application to manage a product inventory, using ASP.NET Core and React.",
+        img: "img/stockManager-img.png",
+        id: 38,
+        urlCode: "https://github.com/meline-p/StockManager",
+        urlSite : "" ,
+        active: true
+    },
+    {
+        title: "ToDo & Co",
+        type: "Full-Stack",
+        infos: "Improve an existing application, PHP Symfony",
+        img: "img/todo-and-co-img.png",
+        id: 37,
+        urlCode: "https://github.com/meline-p/todo-co",
+        urlSite : "" ,
+        active: true
+    },
+    {
         title: "BileMo",
         type: "Back-End",
         infos: "API REST with PHP Symfony",
@@ -139,16 +159,16 @@ const projetsData =[
         urlSite : "https://meline-p.github.io/Movie-App/" ,
         active: true
     },
-    {
-        title: "BMI-Calculator",
-        type: "Back-End",
-        infos: "HTML/CSS, Javascript, Node.js, Express.js",
-        img: "https://www.beelights.gr/assets/images/empty-image.png",
-        id: 21,
-        urlCode: "https://github.com/meline-p/BMI-Calculator/",
-        urlSite : "" ,
-        active: true
-    },
+    // {
+    //     title: "BMI-Calculator",
+    //     type: "Back-End",
+    //     infos: "HTML/CSS, Javascript, Node.js, Express.js",
+    //     img: "https://www.beelights.gr/assets/images/empty-image.png",
+    //     id: 21,
+    //     urlCode: "https://github.com/meline-p/BMI-Calculator/",
+    //     urlSite : "" ,
+    //     active: false
+    // },
     {
         title: "The Simon Game",
         type: "Front-End",
@@ -447,7 +467,7 @@ function spreadProjects() {
         const projectEl = document.createElement('div');
         projectEl.classList.add("project-item");
         projectEl.innerHTML =`
-        <a class="project-link" href="${urlSite}" target="_blank">
+        <a class="project-link" href="${urlSite != "" ? urlSite : urlCode}" target="_blank">
             <div class="project-card">
                 <img class="project-img" src="${img}" alt="img-${id}">
                 <div class="project-card-info">
@@ -506,7 +526,7 @@ function handleClickFe() {
         const projectEl = document.createElement('div');
         projectEl.classList.add("project-item");
         projectEl.innerHTML =`
-        <a class="project-link" href="${urlSite}" target="_blank">
+        <a class="project-link" href="${urlSite != "" ? urlSite : urlCode}" target="_blank">
             <div class="project-card">
                 <img class="project-img" src="${img}" alt="img-${id}">
                 <div class="project-card-info">
@@ -561,7 +581,7 @@ function handleClickBe() {
         const projectEl = document.createElement('div');
         projectEl.classList.add("project-item");
         projectEl.innerHTML =`
-        <a class="project-link" href="${urlSite}" target="_blank">
+        <a class="project-link" href="${urlSite != "" ? urlSite : urlCode}" target="_blank">
             <div class="project-card">
                 <img class="project-img" src="${img}" alt="img-${id}">
                 <div class="project-card-info">
@@ -617,7 +637,7 @@ function handleClickFs() {
         const projectEl = document.createElement('div');
         projectEl.classList.add("project-item");
         projectEl.innerHTML =`
-        <a class="project-link" href="${urlSite}" target="_blank">
+        <a class="project-link" href="${urlSite != "" ? urlSite : urlCode}" target="_blank">
             <div class="project-card">
                 <img class="project-img" src="${img}" alt="img-${id}">
                 <div class="project-card-info">
