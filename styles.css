@@ -337,6 +337,25 @@ body {
 
 @media only screen and (max-width: 900px) {
   /* For Tablets */
+  .img-background-section {
+    min-height: 60vh;
+    background-attachment: scroll;
+    background-position: bottom;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* For Mobile */
+  .img-background-section {
+    height: 200px;
+    min-height: 60vh;
+    background-attachment: scroll;
+    background-position: bottom;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* For Tablets */
 
   .container-home-img {
     background-attachment: scroll;
